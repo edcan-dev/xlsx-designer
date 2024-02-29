@@ -16,6 +16,7 @@ export const ActivitiesListItem = ({ activity }: Props) => {
             
             <p className="card-text light-blue-text mb-3">{ activity.shortTitle }</p>
             
+            <p className="card-text gray-text">{ activity.location }</p>
             <p className="card-text red-text">{ activity.description }</p>
             <p className="card-text">
               <small className="orange-text">{ activity.dateString }</small>

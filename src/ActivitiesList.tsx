@@ -12,6 +12,7 @@ export const ActivitiesList = ({ activitiesList }: Props) => {
     <div className="mb-3">
       <span style={{color: 'blue', fontWeight: 'bolder', display: 'block'}} >Título</span>
       <span style={{color: 'cornflowerblue', fontWeight: 'bolder', display: 'block'}} >Título corto</span>
+      <span style={{color: 'gray', fontWeight: 'bolder', display: 'block'}} >Ubicacion</span>
       <span style={{color: 'red', fontWeight: 'bolder', display: 'block'}} >Descripción</span>
       <span style={{color: 'orange', fontWeight: 'bolder', display: 'block'}} >Fecha</span>
       <span style={{color: 'green', fontWeight: 'bolder', display: 'block'}} >Intro</span>

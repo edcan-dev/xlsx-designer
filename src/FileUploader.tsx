@@ -10,9 +10,13 @@ export const FileUploader = () => {
 
   const handleFileConfirm = () => {
     if(fileInput != undefined) {
-      readFile(fileInput).then(data => {
-        setActivities(data);
-
+      readFile(fileInput)
+        .then(data => {
+          if(data.length == 0) {
+            alert('El archivo es incorrecto.');
+          } else {
+            setActivities(data);
+          }
       });
     }
 
@@ -22,7 +26,9 @@ export const FileUploader = () => {
     <>
       <h4 className='mb-3'>Seleccione el archivo XLSX para previsualizar las actividades</h4>
 
-      <input className='d-block mb-3 form-control' type="file" accept=".xls,.xlsx"
+      <input
+        className={`d-block mb-3 form-control ${ fileInput && 'text-primary' }`}
+        type="file" accept=".xls,.xlsx"
       onChange={ (ev) => {
         setFileInput(ev.target)
       }}
