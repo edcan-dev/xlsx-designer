@@ -7,6 +7,8 @@ interface Props {
 
 export const ActivitiesList = ({ activitiesList }: Props) => {
 
+  console.log(activitiesList);
+
   return (
     <>
     <div className="mb-3">

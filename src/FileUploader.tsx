@@ -11,11 +11,11 @@ export const FileUploader = () => {
   const handleFileConfirm = () => {
     if(fileInput != undefined) {
       readFile(fileInput)
-        .then(data => {
+        .then((data: Activity[])  => {
           if(data.length == 0) {
             alert('El archivo es incorrecto.');
           } else {
-            setActivities(data);
+            setActivities(data.reverse());
           }
       });
     }
